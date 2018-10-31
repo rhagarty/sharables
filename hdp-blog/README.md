@@ -1,8 +1,8 @@
-# Announcing our first Hortonworks Data Platform (HDP) and Watson Studio Local code pattern
+# Discover, Train and Deploy Spam Filter Model on Hortonworks Data Platform using IBM Watson Studio Local
 
 > First a quick note - until just recently, Watson Studio Local was named Data Science Experience (DSX) Local. Please note this as some of the links below may still refer to the product using the old name.
 
-The focus of this first code pattern was to provide an easy-to-follow set of examples that detail how a user might integrate the Hortonworks Data Platform (HDP) with Watson Studio Local.
+The focus of this code pattern is to provide an easy-to-follow set of examples that detail how a user might integrate the Hortonworks Data Platform (HDP) with Watson Studio Local.
 
 In this blog post we will:
 
