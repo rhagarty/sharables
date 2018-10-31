@@ -2,17 +2,13 @@
 
 > First a quick note - until just recently, Watson Studio Local was named Data Science Experience (DSX) Local. Please note this as some of the links below may still refer to the product using the old name.
 
-Following an announcement that designated [Watson Studio Local as certified to work with HDP](https://hortonworks.com/blog/certification-ibm-data-science-experience-dsx-hdp-win-win-customers), our team decided to create a set of code patterns. The code patterns would need to showcase how a user could leverage the two offerings to simplify and accelerate their AI development goals.
-
-We're happy to announce that we've completed our first code pattern, aptly entitled, [INSERT TITLE OF CODE PATTERN HERE](https://developer.ibm.com/code/patterns/sms-spam-filter-using-hortonworks/)! The focus of this first code pattern was to provide an easy-to-follow set of examples that showcase how a user might integrate the two platforms.
+The focus of this first code pattern was to provide an easy-to-follow set of examples that detail how a user might integrate the Hortonworks Data Platform (HDP) with Watson Studio Local.
 
 In this blog post we will:
 
 * Describe what the new code pattern does,
 * Provide a brief overview of HDP and Watson Studio Local, and
 * Explain how the two platforms interact to accomplish the goals of the code pattern.
-
-Many thanks to [Zohar Nissare-Houssen](https://www.linkedin.com/in/all-about-zohar/), [Ali Bajwa](https://www.linkedin.com/in/aliabajwa/) and [Nadeem Asghar](https://www.linkedin.com/in/nadeem-asghar/) for their guidance on all technical matters related to HDP as we developed the code pattern.
 
 ## What's a Spam Filter?
 
