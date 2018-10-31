@@ -2,9 +2,9 @@
 
 > First a quick note - until just recently, Watson Studio Local was named Data Science Experience (DSX) Local. Please note this as some of the links below may still refer to the product using the old name.
 
-Following an announcement that designated [Watson Studio Local as certified to work with HDP](https://hortonworks.com/blog/certification-ibm-data-science-experience-dsx-hdp-win-win-customers) our team decided to create a set of code patterns. The code patterns we create would need to showcase how a user could leverage the two offerings to simplify and accelerate their AI development goals.
+Following an announcement that designated [Watson Studio Local as certified to work with HDP](https://hortonworks.com/blog/certification-ibm-data-science-experience-dsx-hdp-win-win-customers), our team decided to create a set of code patterns. The code patterns would need to showcase how a user could leverage the two offerings to simplify and accelerate their AI development goals.
 
-We're happy to announce that we've completed our first code pattern, aptly entitled, [INSERT TITLE OF CODE PATTERN HERE](https://developer.ibm.com/code/patterns/sms-spam-filter-using-hortonworks/)! The focus of this first code pattern was to provide an easy-to-follow example of integrating the two platforms.
+We're happy to announce that we've completed our first code pattern, aptly entitled, [INSERT TITLE OF CODE PATTERN HERE](https://developer.ibm.com/code/patterns/sms-spam-filter-using-hortonworks/)! The focus of this first code pattern was to provide an easy-to-follow set of examples that showcase how a user might integrate the two platforms.
 
 In this blog post we will:
 
