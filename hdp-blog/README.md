@@ -37,11 +37,11 @@ Aside from running notebooks, Watson Studio also provides projects for multi-ten
 [Hortonworks Data Platform (HDP)](https://hortonworks.com/products/data-platforms/hdp/) is a widely popular massively scalable platform for storing, processing and analyzing large volumes of data. HDP is used in a variety of indutries from medical, to insurance to financial, to see [various HDP solutions on their website](https://hortonworks.com/solutions/). HDP consists of the essential set of Apache Hadoop projects including MapReduce, Hadoop Distributed File System (HDFS), HCatalog, Pig, Hive, HBase, Zookeeper and Ambari. Check out the image below to see what Apache Hadoop projects go into any given HDP release. More detail can be found for each of these projects by going to [Apache Hadoop's documentation](http://hadoop.apache.org/)
 ![](images/hdp_arch.png)
 
-For our code pattern we focused on three components: Apache Spark, Search, HDFS, and Livy.
+For our code pattern we focused on three components: Apache Spark, HDFS, and Livy.
 
 #### Apache Spark
 
-[Apache Spark](http://spark.apache.org) is where event data is first loaded into and then it's machine learning library (MLlib) is used to train a collaborative filtering model. The model data is eventually stored and indexed into HDP Search by way of a Spark connector.
+[Apache Spark](http://spark.apache.org) is where the SMS text message data is first loaded into and then it's machine learning library (MLlib) is used to train a classification model. 
 
 #### HDFS
 
@@ -55,7 +55,7 @@ For our code pattern we focused on three components: Apache Spark, Search, HDFS,
 
 * Try the code pattern out. Check it out by going directly to our [GitHub repo](https://github.com/IBM/sms-spam-filter-using-hortonworks). The code pattern will walk the user through configuring HDP, Python library setup, running the notebook, and lastly interpretting the results.
 
-* Want to see the notebook results directly? Use [NBViewer](http://nbviewer.jupyter.org/github/IBM/sms-spam-filter-using-hortonworks/blob/master/notebooks/Spam%20Filter%20using%20Scikit%20learn%20on%20remote%20spark.jupyter.ipynb) to view one of our code pattern notebooks.
+* Want to see the notebook results directly? Use [NBViewer](http://nbviewer.jupyter.org/) to view one of our code pattern notebooks, for example [this one](http://nbviewer.jupyter.org/github/IBM/sms-spam-filter-using-hortonworks/blob/master/notebooks/Spam%20Filter%20using%20Scikit%20learn%20on%20remote%20spark.jupyter.ipynb) that envokes Spark on our remote HDP cluster.
 
 * Keep an eye on [IBM Code](https://developer.ibm.com/code/patterns/) for more HDP related patterns!
 
