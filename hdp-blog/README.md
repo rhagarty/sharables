@@ -53,7 +53,7 @@ For our code pattern we focused on three components: Apache Spark, HDFS, and Liv
 
 * Want to see the notebook results directly? Use [NBViewer](http://nbviewer.jupyter.org/) to view one of our code pattern notebooks, for example [this one](http://nbviewer.jupyter.org/github/IBM/sms-spam-filter-using-hortonworks/blob/master/notebooks/Spam%20Filter%20using%20Scikit%20learn%20on%20remote%20spark.jupyter.ipynb) that envokes Spark on our remote HDP cluster.
 
-* Keep an eye on [IBM Code](https://developer.ibm.com/code/patterns/) for more HDP related patterns!
+* Keep an eye on [IBM Code](https://developer.ibm.com/code/patterns/) for more Watson Studio related patterns!
 
 ### Read more: 
 
