@@ -1,4 +1,4 @@
-# Discover, Train and Deploy Spam Filter Model on Hortonworks Data Platform using IBM Watson Studio Local
+# Discover, Train and Deploy a Spam Filter Model on Hortonworks Data Platform using IBM Watson Studio Local
 
 > First a quick note - until just recently, Watson Studio Local was named Data Science Experience (DSX) Local. Please note this as some of the links below may still refer to the product using the old name.
 
