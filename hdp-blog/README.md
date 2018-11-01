@@ -51,7 +51,7 @@ For our code pattern we focused on three components: Apache Spark, HDFS, and Liv
 
 In our code pattern, we show provide three different examples of how to train and depoloy a Spam Filter Model. In each example you will learn first how to develop the model locally in Watson Studio Local, and then remotely by leveraging the HDP cluster via the Hadoop Integration service.
 
-The HDP remote integration provices two major advantages: 
+The HDP remote integration provides two major advantages: 
 * There is no limitation on the compute and storage space needed for building the model, as you can leverage all of the resources in the HDP cluster.
 * You aren't required to move or copy the data from the HDP cluster to Watson Studio Local, so you can train the model where the data lives.
 
