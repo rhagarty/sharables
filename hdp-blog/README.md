@@ -45,14 +45,15 @@ For our code pattern we focused on three components: Apache Spark, HDFS, and Liv
 
 #### Livy
 
-[Apache Livy](https://livy.incubator.apache.org/) is a service that enables easy interaction with a Spark cluster over a REST interface.
+[Apache Livy](https://livy.incubator.apache.org/) is a key feature of the [Hadoop Integration service](https://content-dsxlocal.mybluemix.net/docs/content/SSAS34_current/local/hadoopintegration.html) that enables easy interaction with a Spark cluster over a REST interface. The Hadoop Integration service is a component of Watson Studio Local and is installed on the edge node of the HDP cluster.
 
-## Train and Deploy Spam Filter Model
-* Hadoop Integration service, a component of Watson Studio Local installed on the edge node of the HDP cluster, provides the integration between HDP and Watson Studio Local to train the Spam Filter Model in HDP cluster
+## How we integrate the Watson Studio Local and HDP platforms
 
-* There are two major advantages of this integration - 1) No limitations on the compute and storage space needed for building the model as the integration allows the user to leverage the resources in HDP cluster 2) User need not move or copy the data from HDP cluster to Watson Studio Local but can train the model where the data lives.
+In our code pattern, we show provide three different examples of how to train and depoloy a Spam Filter Model. In each example you will learn first how to develop the model locally in Watson Studio Local, and then remotely by leveraging the HDP cluster via the Hadoop Integration service.
 
-* In the code pattern, there are three different illustartions to train and depoloy a Spam Filter Model and in each illustration you will learn how to develop the model locally in Watson Studio Local and then leverage the HDP cluster to train  and deploy the model.
+The HDP remote integration provices two major advantages: 
+* There is no limitation on the compute and storage space needed for building the model, as you can leverage all of the resources in the HDP cluster.
+* You aren't required to move or copy the data from the HDP cluster to Watson Studio Local, so you can train the model where the data lives.
 
 ## How can I get started?
 
