@@ -8,7 +8,7 @@ In this blog post we will:
 
 * Describe what the new code pattern does,
 * Provide a brief overview of HDP and Watson Studio Local, and
-* Explain how the two platforms interact to accomplish the goals of the code pattern.
+* Explain how a user can train and deploy a model leveraging the compute power and data storage in HDP using Watson Studio Local
 
 ## What's a Spam Filter?
 
@@ -46,6 +46,13 @@ For our code pattern we focused on three components: Apache Spark, HDFS, and Liv
 #### Livy
 
 [Apache Livy](https://livy.incubator.apache.org/) is a service that enables easy interaction with a Spark cluster over a REST interface.
+
+## Train and Deploy Spam Filter Model
+* Hadoop Integration service, a component of Watson Studio Local installed on the edge node of the HDP cluster, provides the integration between HDP and Watson Studio Local to train the Spam Filter Model in HDP cluster
+
+* There are two major advantages of this integration - 1) No limitations on the compute and storage space needed for building the model as the integration allows the user to leverage the resources in HDP cluster 2) User need not move or copy the data from HDP cluster to Watson Studio Local but can train the model where the data lives.
+
+* In the code pattern, there are three different illustartions to train and depoloy a Spam Filter Model and in each illustration you will learn how to develop the model locally in Watson Studio Local and then leverage the HDP cluster to train  and deploy the model.
 
 ## How can I get started?
 
