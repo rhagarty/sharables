@@ -1,6 +1,25 @@
-# Discover, Train and Deploy a Spam Filter Model on Hortonworks Data Platform using IBM Watson Studio Local
+# Automated Feature Engineering and Model Scoring using Watson Studio Local
 
 > First a quick note - until just recently, Watson Studio Local was named Data Science Experience (DSX) Local. Please note this as some of the links below may still refer to the product using the old name.
+
+The goal of this code pattern is to demonstrate how data scientists can leverage IBM's Watson Studio Local to automate the:
+
+Periodic extraction of features (used to train the machine learning model) from distributed datasets.
+
+Batch scoring of the extracted features on the deployed model.
+
+To illustrate this, an example data science workflow which classifies 3 different wine categories from the chemical properties of those wines is used in this code pattern.
+
+For feature extraction, Principal component analysis (PCA) is applied on the wine classification datatset and two principal components are extracted.
+
+For the classification model, Logistic regression (a popular machine learning model) is applied on the extracted components to predict the wine categories.
+
+What is PCA? Principal component analysis (PCA) is a popular dimensionality reduction technique which is used to reduce N number of numerical variables into few principal components that are used as features in the machine learning model. These prinicpal components capture a major percentage of the combined variance effect of all the variables.
+
+What is IBM Watson Studio Local? Watson Studio Local is an on premises solution for data scientists and data engineers. It offers a suite of data science tools that integrate with RStudio, Spark, Jupyter, and Zeppelin notebook technologies.
+
+What is the IBM Watson Machine Learning? Watson Machine Learning is a Watson Studio Local tool that provides users the ability to create and train machine learning models. Users can also deploy their models to make them available to a wider audience.
+
 
 The focus of this code pattern is to provide an easy-to-follow set of examples that detail how a user might integrate the Hortonworks Data Platform (HDP) with Watson Studio Local.
 
