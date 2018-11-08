@@ -1,9 +1,10 @@
-This code pattern can be found [here](https://github.com/IBM/watson-multimedia-analyzer)
+The code pattern this is based off of is located at [https://github.com/IBM/watson-multimedia-analyzer](https://github.com/IBM/watson-multimedia-analyzer).
 
 This code pattern uses Speech-to-Text, and Visual Recognition
 
-
+How to run the test app:
 ```
+git clone 
 npm install watson-developer-cloud
 node test.js
 ```
