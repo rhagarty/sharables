@@ -2,25 +2,25 @@ const SpeechToTextV1 = require('watson-developer-cloud/speech-to-text/v1');
 const fs = require('fs');
 
 const speechToText = new SpeechToTextV1({
-  username: 'bb3c549e-dabc-4808-9207-f642b94174a2',
-  password: 'tLY7nrLkw0wY',
+  // create lite instance of STT
+  username: 'username',
+  password: 'password',
 });
 
 const params = {
   objectMode: true,
   content_type: 'audio/ogg;codecs=opus',
+// content_type: 'audio/flac',
   model: 'en-US_BroadbandModel',
   interim_results: true,
 };
-
-  // content_type: 'audio/flac',
 
 // Create the stream.
 const recognizeStream = speechToText.recognizeUsingWebSocket(params);
 
 // Pipe in the audio.
-fs.createReadStream('out5.ogg').pipe(recognizeStream);
-// fs.createReadStream('out7.flac').pipe(recognizeStream);
+fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
+// fs.createReadStream('samples/audio.flac').pipe(recognizeStream);
 
 // Listen for events.
 recognizeStream.on('data', function (event) { onEvent ('Data:', event); });
