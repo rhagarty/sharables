@@ -1,6 +1,8 @@
 The code pattern this is based off of is located at [https://github.com/IBM/watson-multimedia-analyzer](https://github.com/IBM/watson-multimedia-analyzer).
 
-This code pattern uses Speech-to-Text, and Visual Recognition
+This code pattern uses #Speech-to-Text#, and #Visual Recognition#. Uses latest version of SDK - 
+#watson-developer-cloud: 3.12.0#
+
 
 How to run the test app:
 ```
