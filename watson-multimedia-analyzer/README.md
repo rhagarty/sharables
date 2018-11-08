@@ -2,7 +2,7 @@ The code pattern this is based off of is located at [https://github.com/IBM/wats
 
 This code pattern uses `Speech-to-Text`, and `Visual Recognition`. 
 
-Uses latest version of SDK - `watson-developer-cloud: 3.12.0`
+Uses latest version of the Node SDK - `watson-developer-cloud: 3.12.0`
 
 
 How to run the test app:
