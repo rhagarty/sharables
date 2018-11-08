@@ -22,6 +22,6 @@ const params = {
   interim_results: true,
 };
 
-fs.createReadStream('out5.ogg').pipe(recognizeStream);
+fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 ```
 
