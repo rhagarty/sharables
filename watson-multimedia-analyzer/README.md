@@ -28,6 +28,9 @@ const params = {
   interim_results: false,
 };
 
+// Create the stream.
+const recognizeStream = speechToText.recognizeUsingWebSocket(params);
+
 // Pipe in the audio.
 fs.createReadStream('samples/audio.flac').pipe(recognizeStream);
 ```
@@ -41,6 +44,9 @@ const params = {
   interim_results: true,
 };
 
+// Create the stream.
+const recognizeStream = speechToText.recognizeUsingWebSocket(params);
+
 // Pipe in the audio.
 fs.createReadStream('samples/audio.flac').pipe(recognizeStream);
 ```
@@ -54,6 +60,10 @@ const params = {
   interim_results: true,
 };
 
+// Create the stream.
+const recognizeStream = speechToText.recognizeUsingWebSocket(params);
+
+// Pipe in the audio.
 fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 ```
 
@@ -66,6 +76,10 @@ const params = {
   interim_results: false,
 };
 
+// Create the stream.
+const recognizeStream = speechToText.recognizeUsingWebSocket(params);
+
+// Pipe in the audio.
 fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 ```
 
