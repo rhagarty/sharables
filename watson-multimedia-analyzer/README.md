@@ -14,8 +14,8 @@ Modify test.js to point change which file it translates. Depending on the file t
 
 STT has the following behavior, depending on the options set and audio file used:
 
+## This works correctly. Final translated text is returned with completion code 1000
 ```
-// This works correctly. Final translated text is returned with completion code 1000
 const params = {
   objectMode: true,
   content_type: 'audio/flac',
