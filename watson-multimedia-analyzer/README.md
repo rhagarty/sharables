@@ -87,9 +87,7 @@ fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 
 * Small flac / interim_results:true / pass
 * Small flac / interim_results:false / pass
-
 * Large ogg / interim_results:true / pass
 * Large ogg / interim_results:false / fail
-
 * Large flac / interim_results:true / pass
 * Large flac / interim_results:false / fail
