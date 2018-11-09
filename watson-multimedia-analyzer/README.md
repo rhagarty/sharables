@@ -85,6 +85,6 @@ fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 
 ### NOTE: The ogg file used in the previous test contains a large amount of recorded text, while the flac file used earlier is very small. I did run a test where I created a flac file version of the ogg file contents. This file, however, was too large (>38MB) to store in this repo. That test also FAILED, so ogg file format is NOT the only issue.
 
-Small flac = pass
-Large ogg = fail
-Large flac = fail
+* Small flac = pass
+* Large ogg = fail
+* Large flac = fail
