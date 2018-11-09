@@ -19,7 +19,7 @@ Modify test.js to change which file it translates. Depending on the file type, y
 
 STT has the following behavior, depending on the options set and audio file used:
 
-### This works correctly. Final translated text is returned with completion code 1000.
+### 1. This works correctly. Final translated text is returned with completion code 1000.
 ```
 const params = {
   objectMode: true,
@@ -35,7 +35,7 @@ const recognizeStream = speechToText.recognizeUsingWebSocket(params);
 fs.createReadStream('samples/audio.flac').pipe(recognizeStream);
 ```
 
-### This works correctly. A constant stream of translated text is returned, and eventually ends with completion code 1000.
+### 2. This works correctly. A constant stream of translated text is returned, and eventually ends with completion code 1000.
 ```
 const params = {
   objectMode: true,
@@ -51,7 +51,7 @@ const recognizeStream = speechToText.recognizeUsingWebSocket(params);
 fs.createReadStream('samples/audio.flac').pipe(recognizeStream);
 ```
 
-### This works correctly. A constant stream of translated text is returned, and eventually ends with completion code 1000.
+### 3. This works correctly. A constant stream of translated text is returned, and eventually ends with completion code 1000.
 ```
 const params = {
   objectMode: true,
@@ -67,7 +67,7 @@ const recognizeStream = speechToText.recognizeUsingWebSocket(params);
 fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 ```
 
-### This fails. The only data returned is a completion code of 1006.
+### 4. This fails. The only data returned is a completion code of 1006.
 ```
 const params = {
   objectMode: true,
@@ -83,7 +83,7 @@ const recognizeStream = speechToText.recognizeUsingWebSocket(params);
 fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 ```
 
-### NOTE: The ogg file used in the previous test contains a large amount of recorded text, while the flac file used earlier is very small. I did run a test where I created a flac file version of the ogg file contents. This file, however, was too large (>38MB) to store in this repo. That test also FAILED, so ogg file format is NOT the only issue.
+### NOTE: The ogg file used in test #4 contains a large amount of recorded text, while the flac file used earlier in test #1 and #2 is very small. I did run a test where I created a flac file version of the ogg file contents. This file, however, was too large (>38MB) to store in this repo. That test also FAILED, so ogg file format is NOT the only issue.
 
 
 | Format       | size    | interim_results | Result  |
