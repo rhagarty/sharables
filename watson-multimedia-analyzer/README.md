@@ -83,3 +83,5 @@ const recognizeStream = speechToText.recognizeUsingWebSocket(params);
 fs.createReadStream('samples/out5.ogg').pipe(recognizeStream);
 ```
 
+### NOTE: The ogg file contains a large amount of recorded text, while the flac file is very small. I did run a test where I created a flac file version of the ogg file contents. This file, however, was too large (>38MB) to store in this repo. That test also FAILED. So ogg file format is NOT the only issue.
+
