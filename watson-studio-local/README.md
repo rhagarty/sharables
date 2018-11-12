@@ -2,42 +2,21 @@
 
 > First a quick note - until just recently, Watson Studio Local was named Data Science Experience (DSX) Local. Please note this as some of the links below may still refer to the product using the old name.
 
-The goal of this code pattern is to demonstrate how data scientists can leverage IBM's Watson Studio Local to automate the:
-
-Periodic extraction of features (used to train the machine learning model) from distributed datasets.
-
-Batch scoring of the extracted features on the deployed model.
-
-To illustrate this, an example data science workflow which classifies 3 different wine categories from the chemical properties of those wines is used in this code pattern.
-
-For feature extraction, Principal component analysis (PCA) is applied on the wine classification datatset and two principal components are extracted.
-
-For the classification model, Logistic regression (a popular machine learning model) is applied on the extracted components to predict the wine categories.
-
-What is PCA? Principal component analysis (PCA) is a popular dimensionality reduction technique which is used to reduce N number of numerical variables into few principal components that are used as features in the machine learning model. These prinicpal components capture a major percentage of the combined variance effect of all the variables.
-
-What is IBM Watson Studio Local? Watson Studio Local is an on premises solution for data scientists and data engineers. It offers a suite of data science tools that integrate with RStudio, Spark, Jupyter, and Zeppelin notebook technologies.
-
-What is the IBM Watson Machine Learning? Watson Machine Learning is a Watson Studio Local tool that provides users the ability to create and train machine learning models. Users can also deploy their models to make them available to a wider audience.
-
-
-The focus of this code pattern is to provide an easy-to-follow set of examples that detail how a user might integrate the Hortonworks Data Platform (HDP) with Watson Studio Local.
+The focus of this code pattern is to provide a start-to-finish workflow that demonstrates the features and capabilities provied in the new release of IBM's Watson Studio Local.
 
 In this blog post we will:
 
 * Describe what the new code pattern does,
-* Provide a brief overview of HDP and Watson Studio Local, and
-* Explain how a user can train and deploy a model leveraging the compute power and data storage in HDP using Watson Studio Local
+* Provide a brief overview of Watson Studio Local, and
+* Explain how a user can train and deploy a model leveraging the capabilities of Watson Studio Local and Watson Machine Learning
 
-## What's a Spam Filter?
+### What machine learning techniques are covered in this code pattern?
 
-A Spam filter is a type of classification model that can determine if any given SMS text message is spam, or ham (a legitimate message). In our code pattern, we attempt to build such a filter. 
+In this code pattern, we attempt to use the chemical properties of wines to classify them into one of 3 categories. The wine properties are provided by a distributed data set from [kaggle](https://www.kaggle.com/brynja/wineuci).
 
-We start by examining and processing real-life trained data. In our case, we used a publicly available [dataset](https://www.kaggle.com/ishansoni/sms-spam-collection-dataset) from [kaggle.com](https://www.kaggle.com). The dataset contains over 5K messages, each tagged appropriately as spam or ham. Using natural language processing and machine learning algorithms, we take you through the process of building and training our Spam Filter classification model.
+To extract the relevant properties required to classify a wine, Principal component analysis (PCA) is applied to the data set. PCA is a popular dimensionality reduction technique which is used to reduce N number of numerical variables into few principal components that are used as features in the machine learning model. These prinicpal components capture a major percentage of the combined variance effect of all the variables.
 
-## A brief intro to Watson Studio Local and HDP
-
-As mentioned in the title, this code pattern made use of Watson Studio Local and HDP. We'll briefly describe both in this section before diving into how we used the two together.
+For the classification model, Logistic regression (a popular machine learning model) is applied on the extracted components to predict the wine categories.
 
 ### What is Watson Studio Local?
 
@@ -47,42 +26,14 @@ Aside from running notebooks, Watson Studio also provides projects for multi-ten
 
 ![](images/dsx-local-arch.png)
 
-### What is HortonWorks Data Platform?
-
-[Hortonworks Data Platform (HDP)](https://hortonworks.com/products/data-platforms/hdp/) is a widely popular massively scalable platform for storing, processing and analyzing large volumes of data. HDP is used in a variety of indutries from medical, to insurance to financial, to see [various HDP solutions on their website](https://hortonworks.com/solutions/). HDP consists of the essential set of Apache Hadoop projects including MapReduce, Hadoop Distributed File System (HDFS), HCatalog, Pig, Hive, HBase, Zookeeper and Ambari. Check out the image below to see what Apache Hadoop projects go into any given HDP release. More detail can be found for each of these projects by going to [Apache Hadoop's documentation](http://hadoop.apache.org/)
-![](images/hdp_arch.png)
-
-For our code pattern we focused on three components: Apache Spark, HDFS, and Livy.
-
-#### Apache Spark
-
-[Apache Spark](http://spark.apache.org) is where the SMS text message data is first loaded into and then it's machine learning library (MLlib) is used to train a classification model. 
-
-#### HDFS
-
-[HDFS](https://hortonworks.com/apache/hdfs/) is used to store project data sets and is processed by Spark in a distributed fashion to do normal and ML transformations.
-
-#### Livy
-
-[Apache Livy](https://livy.incubator.apache.org/) is a key feature of the [Hadoop Integration service](https://content-dsxlocal.mybluemix.net/docs/content/SSAS34_current/local/hadoopintegration.html) that enables easy interaction with a Spark cluster over a REST interface. The Hadoop Integration service is a component of Watson Studio Local and is installed on the edge node of the HDP cluster.
-
-## How we integrate the Watson Studio Local and HDP platforms
-
-In our code pattern, we show provide three different examples of how to train and depoloy a Spam Filter Model. In each example you will learn first how to develop the model locally in Watson Studio Local, and then remotely by leveraging the HDP cluster via the Hadoop Integration service.
-
-The HDP remote integration provides two major advantages: 
-* There is no limitation on the compute and storage space needed for building the model, as you can leverage all of the resources in the HDP cluster.
-* You aren't required to move or copy the data from the HDP cluster to Watson Studio Local, so you can train the model where the data lives.
-
 ## How can I get started?
 
-* Try the code pattern out. Check it out by going directly to our [GitHub repo](https://github.com/IBM/sms-spam-filter-using-hortonworks). The code pattern will walk the user through configuring HDP, Python library setup, running the notebook, and lastly interpretting the results.
+* Try the code pattern out. Check it out by going directly to our [GitHub repo](https://github.com/IBM/model-mgmt-on-watson-studio-local). The code pattern will walk the user through creating Watson Studio Local assets, running the notebook, and lastly interpretting the results.
 
-* Want to see the notebook results directly? Use [NBViewer](http://nbviewer.jupyter.org/) to view one of our code pattern notebooks, for example [this one](http://nbviewer.jupyter.org/github/IBM/sms-spam-filter-using-hortonworks/blob/master/notebooks/Spam%20Filter%20using%20Scikit%20learn%20on%20remote%20spark.jupyter.ipynb) that envokes Spark on our remote HDP cluster.
+* Want to see the notebook results directly? Use [NBViewer](http://nbviewer.jupyter.org/) to view one of our code pattern notebooks, for example [this one](http://nbviewer.jupyter.org/github/IBM/model-mgmt-on-watson-studio-local/blob/master/notebooks/pca-features.ipynb) that performs feature engineering on our wine data set.
 
 * Keep an eye on [IBM Code](https://developer.ibm.com/code/patterns/) for more Watson Studio related patterns!
 
 ### Read more: 
 
-* https://hortonworks.com/blog/exciting-data-science-experience-hdp/
-* https://hortonworks.com/blog/teaming-data-ibm-hortonworks-broaden-relationship/
+* https://medium.com/ibm-watson/check-out-whats-new-with-watson-studio-93a31f173245
