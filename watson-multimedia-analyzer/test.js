@@ -37,3 +37,5 @@ function onEvent(name, event) {
 function onEvent2(name) {
   console.log(name);
 }
+
+// test
